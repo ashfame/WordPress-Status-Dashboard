@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>WordPress Status Dashboard</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;WordPress Status Dashboard&rdquo; Documentation v1.35</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;WordPress Status Dashboard&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Updated: 5/1/2010<br>
+					Authors: MindCork<br>
+					<br>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our product. If you have any questions that are beyond the scope of this help file, please feel free to contact us via our <a href="http://mindcork.ticksy.com">support system</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#requirements">Technical Requirements</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#usage">Usage</a></li>
+			<li><a href="#upgrading">Upgrading</a></li>
+			<li><a href="#troubleshooting">Troubleshooting</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="requirements"><strong>A) Technical Requirements</strong> - <a href="#toc">top</a></h3>
+		<p>The WP Status Dashboard requires a few things to work:</p>
+		<ol class="spaced">
+			<li><strong>PHP5 or above.</strong> The dashboard uses cURL to read from your WordPress sites, and for best results we highly suggest using PHP5 or above.</li>
+			<li><strong>MySQL database.</strong> To store the data, of course.</li>
+			<li><strong>Clients using WordPress.</strong> This one is pretty self explanatory. :)</li>
+		</ol>
+		
+		<h3 id="installation"><strong>B) Installation</strong> - <a href="#toc">top</a></h3>
+		<p>Installation consists of a few quick steps to get you up and running:</p>
+		<img src="assets/images/config_php.jpg" alt="Configurating your Dashboard" class="right" />
+		<ol class="spaced">
+			<li><strong>Create the Database.</strong> You'll need to create a database from which the WP Status Dashboard runs. If you are unsure of how to do this, contact your hosting provider and they should be able to help you.</li>
+			<li><strong>Import the SQL File.</strong> We've provided an SQL file that you can use to set up the proper table structure for the database you just created. If you are unsure of how to do import an SQL file, contact your hosting provider and they should be able to help you.</li>
+			<li><strong>Edit the "config.php" File.</strong> Within the <em>"WP_Status_Dashboard"</em> folder, locate the <em>"/includes/config.php"</em> file and edit the appropriate information. You'll need to add the database name, user and password that you just created. Then edit the administrator's username and password. You'll use these credentials to view your new dashboard.</li>
+			<li><strong>OPTIONAL: Enter a Security Key.</strong> New since v1.1 is the security key feature. Enter a random string of letters and numbers and then enter that same key on each of your clients' sites (via the plugin settings panel). This will prevent any other WP Status Dashboard user from entering your clients' websites into their dashboard. <strong>NOTE:</strong> This feature requires you to be running the v1.1 WordPress plugin as well!</li>
+			<li><strong>Upload the Files.</strong> Upload the entire directory to a location of your choice. We would suggest using a subdomain such as <em>&ldquo;dashboard.domain.com&rdquo;</em> or <em>&ldquo;clients.domain.com&rdquo;</em>.</li>
+		</ol>	
+			
+		<h3 id="usage"><strong>C) Usage</strong> - <a href="#toc">top</a></h3>
+		<ol class="spaced">
+			<li><strong>Visit your Dashboard.</strong> At this point, you'll want to visit the dashboard to make sure it's running properly. Be sure there are no database errors displaying and that your username/password works correctly.</li>
+			<li><strong>Add your First Client.</strong> Before adding a client to the dashboard, each client needs to have the <em>WP Status Dashboard</em> plugin installed and activated. <br /><br />The easiest way to install the plugin is through the built-in "Install Plugins" functionality within WordPress. Simply search for "WP Status Dashboard" and install it from there.<br /><br /><img src="assets/images/install_plugins.jpg" alt="Configurating your Dashboard" />
+				<br /><br />If you are running an older version of WordPress, or simply prefer to upload the plugin manually, the plugin zip file is included in the <em>/WP_Plugin/</em> folder. Simply upload it to WordPress using their automated system&mdash;or for older versions of WordPress, you'll need to upload it manually via FTP.</p><p><img src="assets/images/add_client.jpg" alt="Configurating your Dashboard" class="left" />Once the plugin is installed on your client's site, you can begin to add their site information to your dashboard; the process for doing so is pretty simple. Click on the "Add Client" button. Doing so opens a modal window that asks you to enter two key pieces of information: client name and the website's URL (don't forget the <em>http://</em>).<br /><br />Once you enter the information, and click the "Add Client" button. Repeat this process for each client that you want to track.<br /><br />Once the client addition process is completed you can begin to actively monitor and manage your client sites.</li>
+			<li><strong>Manage your Sites.</strong> Each client site provides you with the ability to monitor a number of critical factors related to the success of your site. These include:<br /><br />
+				<img src="assets/images/individual_site_info.jpg" alt="Configurating your Dashboard" class="right" />
+				<ul>
+					<li><strong>Status</strong> - whether your site is indexable by search engines or not</li>
+					<li><strong>WP Version</strong> - the version of WordPress the site is running</li>
+					<li><strong>Plugin Updates</strong> - the number of "active" plugins on the site that have an update available</li>
+				</ul>
+Across the bottom of each client "block" there are a number of additional icons to make interacting with the client site more useful and intuitive. These include:<br /><br />
+				<ul class="features">
+					<li class="refresh"><strong>Refresh</strong> - Refresh the specific client information to make sure the most current details are being displayed</li>
+					<li class="admin"><strong>WordPress Admin</strong> - A direct link to the site's WordPress admin panel</li>
+					<li class="edit"><strong>Edit Client Site Info</strong> - Change the client's name and/or URL</li>
+					<li class="delete"><strong>Delete Client Site</strong> - Completely remove the client's site from the dashboard</li>
+				</ul>
+Each client block will also display a different color depending on the status of the site being monitored. The statuses are reflected in each client block background colors as follows:<br /><br />
+				<ul class="status">
+					<li><img src="assets/images/status_green.jpg" alt="Green Status" /> - The site <strong>IS</strong> indexable, running the most current version of WordPress, and all plugins are updated.</li>
+					<li><img src="assets/images/status_yellow.jpg" alt="Yellow Status" /> - There is a general problem with the plugin/site.</li>
+					<li><img src="assets/images/status_red.jpg" alt="Red Status" /> - The site <strong>IS NOT</strong> indexable.</li>									
+					<li><img src="assets/images/status_grey.jpg" alt="Grey Status" /> - The site is <strong>IS</strong> indexable, but either WordPress or one or more plugins need to be updated.</li>	
+				</ul>				
+			</li>
+			<li><strong>Keep Your Dashboard Updated.</strong> On load and/or refresh, the application will check to confirm that the WP Status Dashboard is running the most current version. This information will be displayed in the footer. If an update for is available a download link will be provided. A link to the most updated plugin is also provided.</li>
+		</ol>
+		
+		<h3 id="upgrading"><strong>D) Upgrading</strong> - <a href="#toc">top</a></h3>
+		<p><strong>Upgrading from v1.1</strong></p>
+		<ol class="spaced">
+			<li><strong>Edit the new "config.php" File.</strong> Within the <em>"WP_Status_Dashboard"</em> folder, locate the <em>"/includes/config.php"</em> file and edit the appropriate information. You'll need to add the database name, user and password that you just created. Then edit the administrator's username and password. You'll use these credentials to view your new dashboard.</li>
+			<li><strong>OPTIONAL: Enter a Security Key.</strong> New since v1.1 is the security key feature. Enter a random string of letters and numbers and then enter that same key on each of your clients' sites (via the plugin settings panel). This will prevent any other WP Status Dashboard user from entering your clients' websites into their dashboard. <strong>NOTE:</strong> This feature requires you to be running the v1.1 WordPress plugin as well!</li>
+			<li><strong>Upload the files.</strong> At this point, all you need to do is upload all of the files, overwriting your old ones. This will complete the upgrade.</li>
+		</ol>
+		
+		<p><strong>Upgrading from v1.3</strong></p>
+		<ol class="spaced">
+			<li><strong>Upload the files.</strong> Upload all of the files to their appropriate folders (following the folder structure of the 1.3-1.35 update zip), overwriting your old ones. This will complete the upgrade.</li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="troubleshooting"><strong>E) Troubleshooting</strong> - <a href="#toc">top</a></h3>
+		<p><strong>Known Issues</strong></p>
+		<ol class="spaced">
+			<li><strong>"Security Scan" Plugin.</strong> This plugin blocks the WordPress version. If you want to see your versions, simply deactivate this plugin. There is currently no workaround for this.</li>
+			<li><strong>Some sites work, some don't.</strong> More than likely you have plugin conflicts, or server permission issues. If you're sure that the plugin is installed and the security key is entered correctly, try deactivating all other plugins. If this works, then you know you have a plugin conflict. Simply reactivate them until the issue resurfaces and you'll know which one is the culprit!</li>
+			<li><strong>Still having issues?</strong> Submit a ticket to our support system: <a href="http://mindcork.ticksy.com" target="_blank">http://mindcork.ticksy.com</a></li>
+		</ol>
+		
+		<p>Once again, thank you so much for purchasing our product. We are to help you if you have any questions relating to this product. No guarantees, but we'll do our absolute best to assist. If you have a more general question relating to the products on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

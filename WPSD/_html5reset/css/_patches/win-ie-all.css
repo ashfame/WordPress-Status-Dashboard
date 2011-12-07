@@ -1,0 +1,31 @@
+/*-  SELF-CLEARING FLOATS
+----------------------------------------------------------------------*/
+.mod {zoom: 1;}
+
+
+
+/*-  TELL IE7+ TO SCALE IMAGES USING A MORE ATTRACTIVE METHOD
+----------------------------------------------------------------------*/
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+.button span.add-client {
+	background:#f5f5f5 url('../../../graphics/icons/add.png') no-repeat 12px 12px !important;
+}
+
+.button span.refresh-all {
+	background:#f5f5f5 url('../../../graphics/icons/arrow_refresh.png') no-repeat 12px 12px !important;
+}
+
+.button span.delete {
+	background:#f5f5f5 url('../../../graphics/icons/cross.png') no-repeat 12px 12px !important;
+}
+
+.button span.signin {
+	background:#f5f5f5 url('../../../graphics/icons/door_in.png') no-repeat 12px 12px !important;
+}
+
+.button span.update {
+	background:#f5f5f5 url('../../../graphics/icons/page_white_edit.png') no-repeat 12px 12px !important;
+}
